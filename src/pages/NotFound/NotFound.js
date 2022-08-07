@@ -2,7 +2,7 @@ import React from 'react';
 import './NotFound.scss';
 
 function NotFound() {
-  return <div>NotFound</div>;
+  return <div>404 Page Not Found</div>;
 }
 
 export default NotFound;

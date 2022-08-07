@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-@import './sassStyles/breakpoints.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-  --font-base: 'DM Sans', sans-serif;
+  --font-base: 'Poppins', sans-serif;
+  --header-top-color: #131921;
+  --header-bottom-color: #232f3f;
   --black-color: #030303;
   --white-color: #ffffff;
 }
@@ -34,4 +35,43 @@ body {
 ::selection {
   background-color: var(--primary-color);
   color: var(--secondary-color);
+}
+
+//===========================================================
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    // > 640px
+    @media only screen and (min-width: 40em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    // > 768px
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    // > 1024px
+    @media only screen and (min-width: 64em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    //1280px
+    @media only screen and (min-width: 80em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxl {
+    //1536px
+    @media only screen and (min-width: 96em) {
+      @content;
+    }
+  }
 }

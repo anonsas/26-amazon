@@ -1,0 +1,117 @@
+@import '../../index.scss';
+
+.header-top {
+  background-color: var(--header-top-color);
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  .logo-container {
+    margin-top: 1rem;
+    flex-grow: 1;
+
+    @include respond(sm) {
+      flex-grow: 0;
+    }
+
+    .logo {
+      height: 4rem;
+      width: 15rem;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+
+  .search-container {
+    display: none;
+    height: 3.5rem;
+    border-radius: 0.3rem;
+    background-color: #febd69;
+
+    @include respond(sm) {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    &:hover {
+      background-color: #f3a846;
+    }
+
+    .search__input {
+      height: 100%;
+      width: 1.5rem;
+      font-size: 1.4rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      border-top-left-radius: 0.3rem;
+      border-bottom-left-radius: 0.3rem;
+      flex-grow: 1;
+    }
+    .search__icon {
+      height: 4rem;
+      padding: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .account-container {
+    font-size: 1.2rem;
+    color: var(--white-color);
+    margin: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    & > div {
+      padding: 0.5rem;
+      line-height: 1.2;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 0.3rem;
+      &:hover {
+        border: 1px solid var(--white-color);
+      }
+    }
+    & > div > p:last-of-type {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+  }
+
+  .cart {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    span {
+      height: 2rem;
+      width: 2rem;
+      line-height: 0;
+      font-weight: 700;
+      font-size: 1.4rem;
+      border-radius: 50%;
+      color: var(--black-color);
+      background-color: #f08805;
+      display: grid;
+      place-items: center;
+      position: absolute;
+      top: 0rem;
+      left: 2.9rem;
+    }
+    &__icon {
+      height: 3.5rem;
+    }
+    p {
+      display: none;
+      @include respond(md) {
+        display: inline-flex;
+      }
+    }
+  }
+}
+
+.header-bottom {
+  background-color: var(--header-bottom-color);
+}
