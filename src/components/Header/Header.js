@@ -36,13 +36,16 @@ function Navigation() {
           </div>
         </div>
       </div>
-      <div className="header-bottom"></div>
-      {/* <nav className="primary-nav">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/products">Products</NavLink>
-        <NavLink to="/users">Users</NavLink>
-      </nav> */}
+      <div className="header-bottom">
+        <p>
+          <MenuIcon className="menu__icon" /> All
+        </p>
+        <p>Today's Deals</p>
+        <p>Customer Service</p>
+        <p>Registry</p>
+        <p>Gift Cards</p>
+        <p>Sell</p>
+      </div>
     </header>
   );
 }

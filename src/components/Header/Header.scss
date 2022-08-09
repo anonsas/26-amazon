@@ -113,5 +113,32 @@
 }
 
 .header-bottom {
+  height: 4rem;
+  color: var(--white-color);
   background-color: var(--header-bottom-color);
+  display: flex;
+  align-items: center;
+
+  & > p {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid var(--white-color);
+    }
+  }
+
+  .menu__icon {
+    height: 2rem;
+    margin-right: 0.25rem;
+    color: var(--white-color);
+  }
+
+  p:first-of-type {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
 }
