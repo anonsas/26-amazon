@@ -1,14 +1,16 @@
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
-import Navigation from './components/Header/Header';
-import { NotFound } from './pages/index';
+import { Header, Banner } from './components/index';
 
 function App() {
   return (
     <div>
-      <Navigation />
+      <Header />
 
-      <Routes>
+      <main className="main">
+        <Banner />
+      </main>
+      {/* <Routes>
         <Route path="/" />
         <Route path="about" />
         <Route path="order-summary" />
@@ -24,7 +26,7 @@ function App() {
         </Route>
 
         <Route path="*" element={<NotFound />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
