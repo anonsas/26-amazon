@@ -2,9 +2,18 @@ import React, { useState } from 'react';
 import { StarIcon } from '@heroicons/react/solid';
 import CurrencyFormat from 'react-currency-format';
 import ClampLines from 'react-clamp-lines';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../features/cartSlice';
 
 function Product({ id, title, price, description, category, image, rating }) {
+  const dispatch = useDispatch();
+
   const [ratingStars] = useState(Math.ceil(rating));
+
+  const addItemToCart = () => {
+    const product = { id, title, price, description, category, image, rating };
+    dispatch(addToCart(product));
+  };
 
   return (
     <div className="product">
@@ -48,9 +57,9 @@ function Product({ id, title, price, description, category, image, rating }) {
         />
       </div>
 
-      <a href="#" className="link">
+      <button className="link" onClick={addItemToCart}>
         Add to Cart
-      </a>
+      </button>
     </div>
   );
 }

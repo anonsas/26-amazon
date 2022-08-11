@@ -6,8 +6,8 @@ import { images } from '../../constants/index';
 import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline';
 
 function Navigation() {
-  const cart = useSelector((state) => state.cart);
-  console.log(cart);
+  const items = useSelector((state) => state.cart.items);
+
   return (
     <header>
       <div className="header-top">
@@ -32,7 +32,7 @@ function Navigation() {
           </Link>
 
           <Link to="/checkout" className="cart">
-            <span>0</span>
+            <span>{items.length}</span>
             <ShoppingCartIcon className="cart__icon" />
             <p>Cart</p>
           </Link>
