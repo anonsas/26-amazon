@@ -1,6 +1,7 @@
 @import '../../index.scss';
 
 .header-top {
+  color: var(--white-color);
   background-color: var(--header-top-color);
   height: 6rem;
   display: flex;
@@ -59,23 +60,26 @@
 
   .account-container {
     font-size: 1.2rem;
-    color: var(--white-color);
     margin: 0 1.5rem;
     display: flex;
     align-items: center;
     column-gap: 1.5rem;
 
-    & > div {
+    & > a,
+    & > a:link,
+    & > a:visited {
       padding: 0.5rem;
       line-height: 1.2;
       cursor: pointer;
+      text-decoration: none;
+      color: var(--white-color);
       border: 1px solid transparent;
       border-radius: 0.3rem;
       &:hover {
         border: 1px solid var(--white-color);
       }
     }
-    & > div > p:last-of-type {
+    & > a > p:last-of-type {
       font-weight: 700;
       font-size: 1.4rem;
     }
@@ -83,6 +87,8 @@
 
   .cart {
     position: relative;
+    display: inline-block;
+    text-decoration: none;
     display: flex;
     align-items: flex-end;
     span {

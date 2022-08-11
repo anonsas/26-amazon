@@ -3,7 +3,8 @@ import banner1 from '../assets/images/banner-1.jpg';
 import banner2 from '../assets/images/banner-2.jpg';
 import banner3 from '../assets/images/banner-3.jpg';
 import banner4 from '../assets/images/banner-4.jpg';
-import ads1 from '../assets/images/ads-1.jpg';
+import adHomepage from '../assets/images/ads-homepage.jpg';
+import adCheckout from '../assets/images/ads-checkout.png';
 
 export default {
   logo,
@@ -11,5 +12,6 @@ export default {
   banner2,
   banner3,
   banner4,
-  ads1,
+  adHomepage,
+  adCheckout,
 };

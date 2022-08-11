@@ -40,7 +40,7 @@ function ProductFeed() {
           />
         ))}
 
-      <img src={images.ads1} className="products-ads" alt="ads" />
+      <img src={images.adHomepage} className="products-ads" alt="ad" />
 
       <div className="products-item-span-2">
         {data.data
