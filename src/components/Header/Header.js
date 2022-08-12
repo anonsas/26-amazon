@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { images } from '../../constants/index';
 import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline';
+import { selectItems } from '../../features/cartSlice';
 
 function Navigation() {
-  const items = useSelector((state) => state.cart.items);
+  const items = useSelector(selectItems);
 
   return (
     <header>
@@ -38,6 +39,7 @@ function Navigation() {
           </Link>
         </div>
       </div>
+
       <div className="header-bottom">
         <p>
           <MenuIcon className="menu__icon" /> All

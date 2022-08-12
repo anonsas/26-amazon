@@ -3,13 +3,18 @@ import './checkout.scss';
 import { images } from '../../constants';
 import { useSelector } from 'react-redux';
 import CheckoutProduct from './CheckoutProduct';
+import CurrencyFormat from 'react-currency-format';
+import { Link } from 'react-router-dom';
+import { selectItems, selectTotalPrice } from '../../features/cartSlice';
 
 function Checkout() {
-  const items = useSelector((state) => state.cart.items);
+  const items = useSelector(selectItems);
+  const total = useSelector(selectTotalPrice);
 
   return (
     <main className="checkout-bg">
       <div className="main checkout">
+        {/* LEFT-SIDE */}
         <div className="cart">
           <img src={images.adCheckout} className="cart__ad" alt="ad" />
           <div className="cart__items">
@@ -21,15 +26,30 @@ function Checkout() {
                 title={item.title}
                 price={item.price}
                 description={item.description}
-                category={item.category}
                 image={item.image}
                 rating={item.rating}
               />
             ))}
           </div>
         </div>
+
+        {/* RIGHT-SIDE */}
         <div className="total">
-          <p>Subtotal</p>
+          <h2 className="total__title">
+            Subtotal ({items.length} items):
+            <span>
+              <CurrencyFormat
+                value={total}
+                displayType={'text'}
+                thousandSeparator={true}
+                prefix={'€'}
+              />
+            </span>
+          </h2>
+          {/* link  */}
+          <Link to="/" className="link-disabled">
+            Sign in to Checkout
+          </Link>
         </div>
       </div>
     </main>

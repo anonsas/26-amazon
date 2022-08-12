@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './StarIcons.scss';
 import { StarIcon } from '@heroicons/react/solid';
 
 function StarIcons({ rating }) {
@@ -10,7 +9,11 @@ function StarIcons({ rating }) {
       {Array(ratingStars)
         .fill()
         .map((_, i) => (
-          <StarIcon key={i} className="star-icon" />
+          <StarIcon
+            key={i}
+            className="star-icon"
+            style={{ height: '2rem', color: '#febd69' }}
+          />
         ))}
     </div>
   );

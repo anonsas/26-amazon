@@ -6,9 +6,7 @@ import Product from './Product';
 import { images } from '../../constants';
 
 function ProductFeed() {
-  const fetchProducts = () => {
-    return axios.get('https://fakestoreapi.com/products');
-  };
+  const fetchProducts = () => axios.get('https://fakestoreapi.com/products');
 
   const { isLoading, data, isError, error, isFetching } = useQuery(
     ['product'],
@@ -40,7 +38,7 @@ function ProductFeed() {
           />
         ))}
 
-      <img src={images.adHomepage} className="products-ads" alt="ad" />
+      <img src={images.adHomepage} className="products-ad" alt="ad" />
 
       <div className="products-item-span-2">
         {data.data

@@ -9,6 +9,9 @@
 
   --btn-gradient: linear-gradient(to bottom, rgb(254 240 138), rgb(250 204 21));
   --btn-gradient-hover: linear-gradient(to bottom, rgb(234 179 8), rgb(250 204 21));
+  --btn-gradient-disabled: linear-gradient(to bottom, rgb(209 213 219), rgb(107 114 128));
+
+  --shadow-container: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 *,

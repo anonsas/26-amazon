@@ -28,3 +28,22 @@
     padding: 1rem;
   }
 }
+
+.link-disabled,
+.link-disabled:link,
+.link-disabled:visited {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.125rem;
+  color: var(--white-color);
+  background-image: var(--btn-gradient-disabled);
+  cursor: not-allowed;
+
+  @include respond(sm) {
+    padding: 1rem;
+  }
+}

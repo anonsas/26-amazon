@@ -3,7 +3,7 @@ import CurrencyFormat from 'react-currency-format';
 import ClampLines from 'react-clamp-lines';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../features/cartSlice';
-import StarIcons from '../StarIcons/StarIcons';
+import { StarIcons } from '../index';
 
 function Product({ id, title, price, description, category, image, rating }) {
   const dispatch = useDispatch();

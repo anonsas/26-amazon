@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { removeFromCart } from '../../features/cartSlice';
-import StarIcons from '../../components/StarIcons/StarIcons';
+import { StarIcons } from '../../components';
 import ClampLines from 'react-clamp-lines';
 import CurrencyFormat from 'react-currency-format';
 
-function CheckoutProduct({ id, title, price, description, category, image, rating }) {
+function CheckoutProduct({ id, title, price, description, image, rating }) {
   const dispatch = useDispatch();
-
-  const removeItemFromCart = () => {
-    dispatch(removeFromCart(id));
-  };
+  const removeItemFromCart = () => dispatch(removeFromCart(id));
 
   return (
     <div className="cart-product">
