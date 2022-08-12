@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { StarIcon } from '@heroicons/react/solid';
+import React from 'react';
 import CurrencyFormat from 'react-currency-format';
 import ClampLines from 'react-clamp-lines';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../features/cartSlice';
+import StarIcons from '../StarIcons/StarIcons';
 
 function Product({ id, title, price, description, category, image, rating }) {
   const dispatch = useDispatch();
-
-  const [ratingStars] = useState(Math.ceil(rating));
 
   const addItemToCart = () => {
     const product = { id, title, price, description, category, image, rating };
@@ -30,13 +28,7 @@ function Product({ id, title, price, description, category, image, rating }) {
         innerElement="h4"
       />
 
-      <div className="product__icons">
-        {Array(ratingStars)
-          .fill()
-          .map((_, i) => (
-            <StarIcon key={i} className="product__icon" />
-          ))}
-      </div>
+      <StarIcons rating={rating} />
 
       <ClampLines
         text={description}

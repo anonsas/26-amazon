@@ -36,3 +36,30 @@
     }
   }
 }
+
+.cart-product {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  .img {
+    height: 15rem;
+    width: 15rem;
+    object-fit: contain;
+  }
+
+  .info {
+    margin: 0 1.5rem;
+    grid-column: span 3;
+
+    &__title {
+    }
+    &__desc {
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
