@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b41e911.css",
-    "main.js": "/static/js/main.40ef9165.js",
-    "static/js/787.c075ba41.chunk.js": "/static/js/787.c075ba41.chunk.js",
-    "static/media/banner-1.jpg": "/static/media/banner-1.c5294e5b1ea91f51a35a.jpg",
-    "static/media/banner-4.jpg": "/static/media/banner-4.9aae7f2a8cecb05d605a.jpg",
-    "static/media/banner-2.jpg": "/static/media/banner-2.29a88b5d3899be8053b0.jpg",
-    "static/media/ads-homepage.jpg": "/static/media/ads-homepage.650b3a7053bf38420159.jpg",
-    "static/media/banner-3.jpg": "/static/media/banner-3.8c58bc7315fb33747f1e.jpg",
-    "static/media/logo.png": "/static/media/logo.1c9be0b254d3ff1dc9e9.png",
-    "static/media/ads-checkout.png": "/static/media/ads-checkout.ea9b851601aa0ecfe567.png",
-    "index.html": "/index.html",
-    "main.3b41e911.css.map": "/static/css/main.3b41e911.css.map",
-    "main.40ef9165.js.map": "/static/js/main.40ef9165.js.map",
-    "787.c075ba41.chunk.js.map": "/static/js/787.c075ba41.chunk.js.map"
+    "main.css": "/27-amazon/static/css/main.3b41e911.css",
+    "main.js": "/27-amazon/static/js/main.47ee6e2c.js",
+    "static/js/787.c075ba41.chunk.js": "/27-amazon/static/js/787.c075ba41.chunk.js",
+    "static/media/banner-1.jpg": "/27-amazon/static/media/banner-1.c5294e5b1ea91f51a35a.jpg",
+    "static/media/banner-4.jpg": "/27-amazon/static/media/banner-4.9aae7f2a8cecb05d605a.jpg",
+    "static/media/banner-2.jpg": "/27-amazon/static/media/banner-2.29a88b5d3899be8053b0.jpg",
+    "static/media/ads-homepage.jpg": "/27-amazon/static/media/ads-homepage.650b3a7053bf38420159.jpg",
+    "static/media/banner-3.jpg": "/27-amazon/static/media/banner-3.8c58bc7315fb33747f1e.jpg",
+    "static/media/logo.png": "/27-amazon/static/media/logo.1c9be0b254d3ff1dc9e9.png",
+    "static/media/ads-checkout.png": "/27-amazon/static/media/ads-checkout.ea9b851601aa0ecfe567.png",
+    "index.html": "/27-amazon/index.html",
+    "main.3b41e911.css.map": "/27-amazon/static/css/main.3b41e911.css.map",
+    "main.47ee6e2c.js.map": "/27-amazon/static/js/main.47ee6e2c.js.map",
+    "787.c075ba41.chunk.js.map": "/27-amazon/static/js/787.c075ba41.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b41e911.css",
-    "static/js/main.40ef9165.js"
+    "static/js/main.47ee6e2c.js"
   ]
 }
