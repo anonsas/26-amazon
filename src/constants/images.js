@@ -6,7 +6,7 @@ import banner4 from '../assets/images/banner-4.jpg';
 import adHomepage from '../assets/images/ads-homepage.jpg';
 import adCheckout from '../assets/images/ads-checkout.png';
 
-export default {
+const images = {
   logo,
   banner1,
   banner2,
@@ -15,3 +15,5 @@ export default {
   adHomepage,
   adCheckout,
 };
+
+export default images;
