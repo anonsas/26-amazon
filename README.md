@@ -1,7 +1,7 @@
 # Amazon-clone
 
 E-commerce shop.  
-Live preview: https://anonsas.github.io/27-amazon/
+Live preview: https://amazon-igor.netlify.app
 
 ## Description
 
