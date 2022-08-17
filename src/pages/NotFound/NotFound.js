@@ -1,5 +1,5 @@
 import React from 'react';
-import './NotFound.scss';
+import './notFound.scss';
 
 function NotFound() {
   return <div>404 Page Not Found</div>;
