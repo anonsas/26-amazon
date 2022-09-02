@@ -5,6 +5,7 @@ const store = configureStore({
   reducer: {
     cart: cartReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
 
 export default store;

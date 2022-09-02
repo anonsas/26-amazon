@@ -4,10 +4,21 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { images } from '../../constants/index';
 import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline';
-import { selectItems } from '../../setup/redux/features/cartSlice';
+import { selectItems, selectUser } from '../../setup/redux/features/cartSlice';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase';
 
 function Navigation() {
   const items = useSelector(selectItems);
+  const user = useSelector(selectUser);
+
+  console.log(user);
+
+  const handleAuth = () => {
+    if (user) {
+      signOut(auth);
+    }
+  };
 
   return (
     <header>
@@ -22,10 +33,10 @@ function Navigation() {
         </div>
 
         <div className="account-container">
-          <Link to="/login" className="account">
+          <Link to={!user && '/login'} className="account" onClick={handleAuth}>
             <p>Hello, Guest</p>
             {/* <p>Account & Lists</p> */}
-            <p>Sign In</p>
+            <p>{user ? 'Sign Out' : 'Sign In'}</p>
           </Link>
 
           <Link to="/orders" className="orders">

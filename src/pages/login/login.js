@@ -10,6 +10,7 @@ import {
 
 function Login() {
   const navigate = useNavigate();
+
   const [user, setUser] = useState({
     email: '',
     password: '',
@@ -26,9 +27,7 @@ function Login() {
       .then((userCredential) => {
         const user = userCredential.user;
 
-        if (user) {
-          navigate('/', { replace: true });
-        }
+        if (user) navigate('/', { replace: true });
       })
       .catch((error) => {
         alert(error.code);
@@ -47,9 +46,7 @@ function Login() {
         const user = userCredential.user;
         console.log(user);
 
-        if (user) {
-          navigate('/', { replace: true });
-        }
+        if (user) navigate('/', { replace: true });
       })
       .catch((error) => {
         alert(error.code);

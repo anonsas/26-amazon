@@ -3,7 +3,7 @@ import CurrencyFormat from 'react-currency-format';
 import ClampLines from 'react-clamp-lines';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../setup/redux/features/cartSlice';
-import { StarIcons } from '../index';
+import { StarIcons } from '../../helpers/index';
 import { ToastContainer, toast } from 'react-toastify';
 
 function Product({ id, title, price, description, category, image, rating }) {
