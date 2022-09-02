@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "firebase": "^9.9.4",
     "react": "^18.2.0",
     "react-clamp-lines": "^3.0.3",
     "react-currency-format": "^1.1.0",
@@ -20,6 +21,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.0.8",
     "sass": "^1.54.3",
     "web-vitals": "^2.1.4"
   },

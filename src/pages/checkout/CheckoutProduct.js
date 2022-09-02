@@ -1,13 +1,28 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeFromCart } from '../../features/cartSlice';
+import { removeFromCart } from '../../setup/redux/features/cartSlice';
 import { StarIcons } from '../../components';
 import ClampLines from 'react-clamp-lines';
 import CurrencyFormat from 'react-currency-format';
+import { ToastContainer, toast } from 'react-toastify';
 
 function CheckoutProduct({ id, title, price, description, image, rating }) {
+  const notify = () =>
+    toast.success('Item removed from cart!', {
+      position: 'bottom-right',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
   const dispatch = useDispatch();
-  const removeItemFromCart = () => dispatch(removeFromCart(id));
+  const removeItemFromCart = () => {
+    dispatch(removeFromCart(id));
+    notify();
+  };
 
   return (
     <div className="cart-product">
@@ -37,6 +52,7 @@ function CheckoutProduct({ id, title, price, description, image, rating }) {
         <button className="link" onClick={removeItemFromCart}>
           Remove Item
         </button>
+        <ToastContainer />
       </div>
     </div>
   );

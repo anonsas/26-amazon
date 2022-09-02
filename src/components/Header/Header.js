@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { images } from '../../constants/index';
 import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline';
-import { selectItems } from '../../features/cartSlice';
+import { selectItems } from '../../setup/redux/features/cartSlice';
 
 function Navigation() {
   const items = useSelector(selectItems);
@@ -13,7 +13,7 @@ function Navigation() {
     <header>
       <div className="header-top">
         <Link to="/" className="logo-container">
-          <img src={images.logo} alt="logo" className="logo" />
+          <img src={images.logoLight} alt="logo" className="logo" />
         </Link>
 
         <div className="search-container">
@@ -22,9 +22,10 @@ function Navigation() {
         </div>
 
         <div className="account-container">
-          <Link to="/account" className="account">
-            <p>Hello, Igor Lukjanov</p>
-            <p>Account & Lists</p>
+          <Link to="/login" className="account">
+            <p>Hello, Guest</p>
+            {/* <p>Account & Lists</p> */}
+            <p>Sign In</p>
           </Link>
 
           <Link to="/orders" className="orders">

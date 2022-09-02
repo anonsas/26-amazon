@@ -11,6 +11,7 @@
   .logo-container {
     margin-top: 1rem;
     flex-grow: 1;
+    outline: none;
 
     @include respond(sm) {
       flex-grow: 0;

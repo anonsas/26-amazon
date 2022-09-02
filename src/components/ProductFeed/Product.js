@@ -2,15 +2,28 @@ import React from 'react';
 import CurrencyFormat from 'react-currency-format';
 import ClampLines from 'react-clamp-lines';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../features/cartSlice';
+import { addToCart } from '../../setup/redux/features/cartSlice';
 import { StarIcons } from '../index';
+import { ToastContainer, toast } from 'react-toastify';
 
 function Product({ id, title, price, description, category, image, rating }) {
+  const notify = () =>
+    toast.success('Item added to cart!', {
+      position: 'bottom-right',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
   const dispatch = useDispatch();
 
   const addItemToCart = () => {
     const product = { id, title, price, description, category, image, rating };
     dispatch(addToCart(product));
+    notify();
   };
 
   return (
@@ -52,6 +65,8 @@ function Product({ id, title, price, description, category, image, rating }) {
       <button className="link" onClick={addItemToCart}>
         Add to Cart
       </button>
+
+      <ToastContainer />
     </div>
   );
 }

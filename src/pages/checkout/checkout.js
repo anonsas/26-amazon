@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import CheckoutProduct from './CheckoutProduct';
 import CurrencyFormat from 'react-currency-format';
 import { Link } from 'react-router-dom';
-import { selectItems, selectTotalPrice } from '../../features/cartSlice';
+import { selectItems, selectTotalPrice } from '../../setup/redux/features/cartSlice';
 
 function Checkout() {
   const items = useSelector(selectItems);
@@ -47,7 +47,7 @@ function Checkout() {
             </span>
           </h2>
           {/* link  */}
-          <Link to="/" className="link-disabled">
+          <Link to="/login" className="link">
             Sign in to Checkout
           </Link>
         </div>

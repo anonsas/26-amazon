@@ -4,21 +4,24 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import Product from './Product';
 import { images } from '../../constants';
+import Loader from '../../helpers/Loader/Loader';
 
 function ProductFeed() {
   const fetchProducts = () => axios.get('https://fakestoreapi.com/products');
 
-  const { isLoading, data, isError, error, isFetching } = useQuery(
-    ['product'],
-    fetchProducts
-  );
+  const { isLoading, data, isError, error } = useQuery(['product'], fetchProducts);
 
-  if (isLoading || isFetching) {
-    return <h2>Loading...</h2>;
+  if (isLoading) {
+    return <Loader />;
   }
 
   if (isError) {
-    return <h2>{error}</h2>;
+    return (
+      <div style={{ margin: '2rem' }}>
+        <h3>Something went wrong: {error.message}</h3>
+        <h4>Please try to reload the page</h4>
+      </div>
+    );
   }
 
   return (
