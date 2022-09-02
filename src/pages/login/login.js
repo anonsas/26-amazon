@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import './login.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { images } from '../../constants/index';
+import { auth } from '../../firebase';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from 'firebase/auth';
 
 function Login() {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     email: '',
     password: '',
@@ -16,13 +22,39 @@ function Login() {
   const signInHandler = (e) => {
     e.preventDefault();
 
+    signInWithEmailAndPassword(auth, user.email, user.password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+
+        if (user) {
+          navigate('/', { replace: true });
+        }
+      })
+      .catch((error) => {
+        alert(error.code);
+      });
+
     setUser({
       email: '',
       password: '',
     });
   };
 
-  const registerHandler = () => {};
+  const registerHandler = () => {
+    createUserWithEmailAndPassword(auth, user.email, user.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+
+        if (user) {
+          navigate('/', { replace: true });
+        }
+      })
+      .catch((error) => {
+        alert(error.code);
+      });
+  };
 
   return (
     <div className="login">
